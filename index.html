@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Success</title>
+</head>
+<body>
+
+    <div class="count">
+        <form action="">
+            <label for="tran"><h2 id="tr">Transation</h2>
+                <input type="text" id="tran" placeholder="TRANSACTION" required title="please fill transaction id">
+            </label>
+        </form>
+
+        <form action="">
+            <label for="am"><h2 id="am">Amount</h2>
+                <input type="text" id="amount" placeholder="AMOUNT" required title="please fill amount">
+            </label>
+        </form>
+    </div>
+
+    <div class="container">
+        
+        <button type="submit" class="btn" onclick="openPopup()">Check Out</button>
+        <div class="popup" id="popup">
+           <img src="check.png">
+           <h2>Payment Successfull</h2>
+           <p>Your payment has been successfully submited. Thanks!</p>
+           <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.add("close-popup");
+}
+
+</script>
+</body>
+</html>
